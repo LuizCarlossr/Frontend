@@ -18,16 +18,16 @@ export default class produto extends Component {
     }
  
     render() {
-        const { produto } = this.state;
+        const { produto, index } = this.state;
         
         return (
             <div className="produto-info">
-                <h1> {produto.nome} </h1>
-                <h1> {produto.preço} </h1>
-                <h1> {produto.quantidadeEstoque} </h1>
-                <h1> {produto.descrição} </h1>
-                <br />
-                <Link to={`/produtos`}> Voltar </Link> <br />
+                <h1> Produto: {produto.Nome} </h1>
+                <h1> Descrição: {produto.Descricao} </h1>
+                <h1> Preço: R${produto.Preco},00 </h1>
+                <h1> Quantidade em estoque: {produto.QuantidadeEstoque} </h1>
+                <br/>
+                <Link to={`/produto`}> Voltar </Link> <br />
                 <Link to={`/editarproduto/${produto.id}`}> Editar </Link> <br />
                 <Link to={`/deletarproduto/${produto.id}`}> Deletar </Link> <br />
             </div >

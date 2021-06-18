@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import './index.css';
  
-class Editarproduto extends Component {
+class EditarProduto extends Component {
     constructor(props) {
         super(props);
  
         this.state = {
             produto: {
-                nome: "",
-                preço: "",
-                quantidadeEstoque: "",
-                descrição: ""
+                Nome: "",
+                Descricao: "",
+                Preco: "",
+                QuantidadeEstoque: ""
             },
             erro: null,
             redirect: false
@@ -50,70 +50,70 @@ class Editarproduto extends Component {
         const { redirect } = this.state;
  
         if (redirect) {
-            return <Redirect to="/produtos" />;
+            return <Redirect to="/produto" />;
         } else {
             return (
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
                         <legend>Criar Produto</legend>
                         <div className="produto-update">
-                            <label htmlFor="nome">Nome </label>
+                            <label htmlFor="Nome">Nome </label>
                             <br />
                             <input
                                 type="text"
-                                id="nome"
-                                name="nome"
+                                id="Nome"
+                                name="Nome"
                                 placeholder="Nome"
                                 minLength="3"
                                 maxLength="100"
                                 required
-                                value={this.state.produto.nome}
+                                value={this.state.produto.Nome}
                                 onChange={this.handleInputChange}
                             />
                         </div>
-                        <div className="produto-insert">
-                            <label htmlFor="preço">Preço </label>
+                        <div className="produto-update">
+                            <label htmlFor="Descricao">Descrição </label>
                             <br />
                             <input
                                 type="text"
-                                id="preço"
-                                name="preço"
-                                placeholder="Preço"
+                                id="Descricao"
+                                name="Descricao"
+                                placeholder="Matrícula"
+                                min="1"
+                                max="99999"
                                 required
-                                value={this.state.produto.preço}
+                                value={this.state.produto.Descricao}
                                 onChange={this.handleInputChange}
                             />
                         </div>
-                        <div className="produto-insert">
-                            <label htmlFor="quantidadeEstoque">Quantidade Em Estoque </label>
+                        <div className="produto-update">
+                            <label htmlFor="Preco">Preço </label>
                             <br />
                             <input
                                 type="text"
-                                id="quantidadeEstoque"
-                                name="quantidadeEstoque"
-                                placeholder="Quantidade em Estoque"
+                                id="Preco"
+                                name="Preco"
+                                placeholder="Preco"
                                 required
-                                value={this.state.produto.quantidadeEmEstoque}
-                                onChange={this.handleInputChange}
-                            />
-                        </div>
- 
-                        <div className="produto-insert">
-                            <label htmlFor="descrição">Descrição </label>
-                            <br />
-                            <input
-                                type="text"
-                                id="descrição"
-                                name="descrição"
-                                placeholder="Descrição"
-                                minLength="3"
-                                maxLength="100"
-                                required
-                                value={this.state.produto.descrição}
+                                value={this.state.produto.Preco}
                                 onChange={this.handleInputChange}
                             />
                         </div>
 
+                        <div className="produto-update">
+                            <label htmlFor="QuantidadeEstoque">Quantidade em Estoque </label>
+                            <br />
+                            <input
+                                type="text"
+                                id="QuantidadeEstoque"
+                                name="QuantidadeEstoque"
+                                placeholder="QuantidadeEstoque"
+                                required
+                                value={this.state.produto.QuantidadeEstoque}
+                                onChange={this.handleInputChange}
+                            />
+                        </div>
+ 
                         <button type="submit" className="btn btn-primary">
                             Atualizar
                     </button>
@@ -160,4 +160,4 @@ class Editarproduto extends Component {
     };
 }
  
-export default Editarproduto;
+export default EditarProduto;
