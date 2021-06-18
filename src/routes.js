@@ -3,8 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
  
 import Mainproduto from './pages/produto/main';
 import Detalhesproduto from './pages/produto/detalhes';
-import Criarproduto from './pages/produto/criar';
-import Editarproduto from './pages/produto/editar';
+import CriarProduto from './pages/produto/criar';
+import EditarProduto from './pages/produto/editar';
 import Deletarproduto from './pages/produto/deletar';
  
 const Routes = () => (
