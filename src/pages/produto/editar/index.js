@@ -57,7 +57,7 @@ class EditarProduto extends Component {
                     <fieldset>
                         <legend>Atualizar Produto</legend>
                         <div className="produto-update">
-                            <label htmlFor="Nome">Nome </label>
+                            <label htmlFor="nome">Nome </label>
                             <br />
                             <input
                                 type="text"
@@ -77,13 +77,13 @@ class EditarProduto extends Component {
                             <input
                                 type="text"
                                 id="Descrição"
-                                name="Preçocrição"
-                                Preço="Descrição"
+                                name="Descrição"
+                                placeholder="Descrição"
                                 min="1"
                                 max="99999"
                                 required
                                 value={this.state.produto.Descrição}
-                                onChange={this.Preçonge}
+                                onChange={this.handleInputChange}
                             />
                         </div>
                         <div className="produto-update">
