@@ -11,7 +11,7 @@ class CriarProduto extends Component {
                 Nome: "",
                 Descricao: "",
                 Preco: "",
-                QuantidadeEstoque: ""
+                QuantidadeEstoque: "",
             },
             erro: null,
             redirect: false
@@ -38,12 +38,12 @@ class CriarProduto extends Component {
             return (
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
-                        <legend>Criar Produto</legend>
+                        <legend>Criar Produtos</legend>
                         <div className="produto-insert">
                             <label htmlFor="Nome">Nome </label>
                             <br />
                             <input
-                                type="string"
+                                type="text"
                                 id="Nome"
                                 name="Nome"
                                 placeholder="Nome"
@@ -58,10 +58,10 @@ class CriarProduto extends Component {
                             <label htmlFor="Descricao">Descrição </label>
                             <br />
                             <input
-                                type="string"
+                                type="text"
                                 id="Descricao"
                                 name="Descricao"
-                                placeholder="Descrição do Produto"
+                                placeholder="Descrição"
                                 required
                                 value={this.state.produto.Descricao}
                                 onChange={this.handleInputChange}
@@ -71,10 +71,10 @@ class CriarProduto extends Component {
                             <label htmlFor="Preco">Preço </label>
                             <br />
                             <input
-                                type="double"
+                                type="text"
                                 id="Preco"
                                 name="Preco"
-                                placeholder="Preço do Produto"
+                                placeholder="Preço"
                                 required
                                 value={this.state.produto.Preco}
                                 onChange={this.handleInputChange}
@@ -82,13 +82,13 @@ class CriarProduto extends Component {
                         </div>
  
                         <div className="produto-insert">
-                            <label htmlFor="Preco">Quantidade em Estoque </label>
+                            <label htmlFor="QuantidadeEstoque">Quantidade em Estoque </label>
                             <br />
                             <input
-                                type="string"
+                                type="text"
                                 id="QuantidadeEstoque"
                                 name="QuantidadeEstoque"
-                                placeholder="QuantidadeEstoque"
+                                placeholder="Quantidade em Estoque"
                                 required
                                 value={this.state.produto.QuantidadeEstoque}
                                 onChange={this.handleInputChange}

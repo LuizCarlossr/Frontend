@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
 import './index.css';
  
-class Deletarproduto extends Component {
+class DeletarProduto extends Component {
     constructor(props) {
         super(props);
  
@@ -46,13 +46,13 @@ class Deletarproduto extends Component {
         const { redirect } = this.state;
  
         if (redirect) {
-            return <Redirect to="/produtos" />;
+            return <Redirect to="/produto" />;
         } else {
             return (
                 <fieldset>
                     <legend>Deletar Produto</legend>
                     <div className="produto-delete">
-                        <label htmlFor="nome">{this.state.produto.nome} </label>
+                        <label htmlFor="nome">{this.state.produto.Nome} </label>
                         <p>Tem certeza que deseja deletar este registro?</p>
  
                         <button
@@ -61,13 +61,13 @@ class Deletarproduto extends Component {
                             Remover
                         </button>
                         <br /><br />
-                        <Link to={`/produtos`}>Voltar</Link>
+                        <Link to={`/produto`}>Voltar</Link>
                     </div>
                 </fieldset>
             );
         }
     }
-    
+ 
     handleClick = event => {
         const { id } = this.props.match.params;
  
@@ -91,4 +91,4 @@ class Deletarproduto extends Component {
     };
 }
  
-export default Deletarproduto;
+export default DeletarProduto;

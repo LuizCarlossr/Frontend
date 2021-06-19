@@ -55,9 +55,9 @@ class EditarProduto extends Component {
             return (
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
-                        <legend>Criar Produto</legend>
+                        <legend>Atualizar Produto</legend>
                         <div className="produto-update">
-                            <label htmlFor="Nome">Nome </label>
+                            <label htmlFor="nome">Nome </label>
                             <br />
                             <input
                                 type="text"
@@ -78,7 +78,7 @@ class EditarProduto extends Component {
                                 type="text"
                                 id="Descricao"
                                 name="Descricao"
-                                placeholder="Matrícula"
+                                placeholder="Descrição"
                                 min="1"
                                 max="99999"
                                 required
@@ -93,13 +93,12 @@ class EditarProduto extends Component {
                                 type="text"
                                 id="Preco"
                                 name="Preco"
-                                placeholder="Preco"
+                                placeholder="Preço"
                                 required
                                 value={this.state.produto.Preco}
                                 onChange={this.handleInputChange}
                             />
                         </div>
-
                         <div className="produto-update">
                             <label htmlFor="QuantidadeEstoque">Quantidade em Estoque </label>
                             <br />
@@ -107,13 +106,14 @@ class EditarProduto extends Component {
                                 type="text"
                                 id="QuantidadeEstoque"
                                 name="QuantidadeEstoque"
-                                placeholder="QuantidadeEstoque"
+                                placeholder="Quantidade em Estoque"
                                 required
                                 value={this.state.produto.QuantidadeEstoque}
                                 onChange={this.handleInputChange}
                             />
                         </div>
  
+
                         <button type="submit" className="btn btn-primary">
                             Atualizar
                     </button>
@@ -122,6 +122,8 @@ class EditarProduto extends Component {
             );
         }
     }
+ 
+ 
  
     handleInputChange = event => {
         const target = event.target;

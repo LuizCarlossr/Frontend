@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+ 
 export default class Main extends Component {
     constructor(props) {
         super(props);
@@ -31,7 +31,7 @@ export default class Main extends Component {
  
                 <table class="table table-hover">
                     <thead>
-                    <tr>
+                        <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Descrição</th>
@@ -43,15 +43,15 @@ export default class Main extends Component {
                     <tbody>
                         {produto.map((produto, index) => (
                             <tr>
-                            <th scope="row">{produto.id}</th>
-                            <td>{produto.Nome}</td>
-                            <td>{produto.Descricao}</td>
-                            <td>{produto.Preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
-                            <td>{produto.QuantidadeEstoque.toLocaleString('pt-BR', )}</td>
-                            <td> <Link to={`/Produto/${produto.id}`}> <button type="button" class="btn btn-primary">Detalhes</button> </Link> </td>
-                            <td> <Link to={`/editarProduto/${produto.id}`}> <button type="button" class="btn btn-warning">Atualizar</button> </Link></td>
-                            <td> <Link to={`/DeletarProduto/${produto.id}`}> <button type="button" class="btn btn-danger">Excluir</button> </Link></td>
-                        </tr>
+                                <th scope="row">{produto.id}</th>
+                                <td>{produto.nome}</td>
+                                <td>{produto.Descricao}</td> 
+                                <td>{produto.Preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                                <td>{produto.QuantidadeEstoque}</td>
+                                <td> <Link to={`/produto/${produto.id}`}> <button type="button" class="btn btn-primary">Detalhes</button> </Link> </td>
+                                <td> <Link to={`/editarProduto/${produto.id}`}> <button type="button" class="btn btn-warning">Atualizar</button> </Link></td>
+                                <td> <Link to={`/deletarProduto/${produto.id}`}> <button type="button" class="btn btn-danger">Excluir</button> </Link></td>
+                            </tr>
                         ))}
                     </tbody>
                 </table>
