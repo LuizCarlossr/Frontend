@@ -57,7 +57,7 @@ class EditarProduto extends Component {
                     <fieldset>
                         <legend>Atualizar Produto</legend>
                         <div className="produto-update">
-                            <label htmlFor="nome">Nome </label>
+                            <label htmlFor="Nome">Nome </label>
                             <br />
                             <input
                                 type="text"
