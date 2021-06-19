@@ -23,8 +23,8 @@ export default class produto extends Component {
         return (
             <div className="produto-info">
                 <h1> {produto.Nome} </h1>
-                <h1> {produto.Descricao} </h1>
-                <h1> {produto.Preco} </h1>
+                <h1> {produto.Descrição} </h1>
+                <h1> {produto.Preço} </h1>
                 <h1> {produto.QuantidadeEstoque} </h1>
                 <br />
                 <Link to={`/produto`}> Voltar </Link> <br />

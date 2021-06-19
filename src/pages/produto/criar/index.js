@@ -9,8 +9,8 @@ class CriarProduto extends Component {
         this.state = {
             produto: {
                 Nome: "",
-                Descricao: "",
-                Preco: "",
+                Descrição: "",
+                Preço: "",
                 QuantidadeEstoque: "",
             },
             erro: null,
@@ -55,28 +55,28 @@ class CriarProduto extends Component {
                             />
                         </div>
                         <div className="produto-insert">
-                            <label htmlFor="Descricao">Descrição </label>
+                            <label htmlFor="Descrição">Descrição </label>
                             <br />
                             <input
                                 type="text"
-                                id="Descricao"
-                                name="Descricao"
+                                id="Descrição"
+                                name="Descrição"
                                 placeholder="Descrição"
                                 required
-                                value={this.state.produto.Descricao}
+                                value={this.state.produto.Descrição}
                                 onChange={this.handleInputChange}
                             />
                         </div>
                         <div className="produto-insert">
-                            <label htmlFor="Preco">Preço </label>
+                            <label htmlFor="Preço">Preço </label>
                             <br />
                             <input
                                 type="text"
-                                id="Preco"
-                                name="Preco"
+                                id="Preço"
+                                name="Preço"
                                 placeholder="Preço"
                                 required
-                                value={this.state.produto.Preco}
+                                value={this.state.produto.Preço}
                                 onChange={this.handleInputChange}
                             />
                         </div>
