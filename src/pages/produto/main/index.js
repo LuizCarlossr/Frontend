@@ -44,7 +44,7 @@ export default class Main extends Component {
                         {produto.map((produto, index) => (
                             <tr>
                                 <th scope="row">{produto.id}</th>
-                                <td>{produto.nome}</td>
+                                <td>{produto.Nome}</td>
                                 <td>{produto.Descrição}</td> 
                                 <td>{produto.Preço.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                                 <td>{produto.QuantidadeEstoque}</td>
